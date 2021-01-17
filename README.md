@@ -15,6 +15,6 @@ REFERENCE FOR BACK-END PHP API (JWT & Request Payload)
 <p>Github: https://github.com/durgesh-sahani/restapi-jwt-php-mysql
 Youtube: https://www.youtube.com/watch?v=l2xghbSlBQg&list=PLCakfctNSHkGQ6S557u-6sLEYsfWje47P<br></p>
 <hr>
- REFERENCE FOR FRONT-END ANDROID RESTFUL API CONSUMER (JWT, refresh token & retrofit)
+ REFERENCE FOR FRONT-END ANDROID RESTFUL API CONSUMER (JWT, refresh token & retrofit)<br>
  Github: https://github.com/ProgrammationAndroid/Laravel-Passport-Android<br>
  Youtube: https://www.youtube.com/playlist?list=PLEubh3Rmu4tn8xtkVcWnWOjQcGG4aeRK-
