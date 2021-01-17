@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 18, 2017 at 04:10 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Hôte : localhost:3306
+-- Généré le :  Dim 17 jan. 2021 à 12:32
+-- Version du serveur :  5.7.19
+-- Version de PHP :  7.1.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,36 +19,40 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `jwtapi`
+-- Base de données :  `jwtapi`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Structure de la table `customers`
 --
 
 CREATE TABLE `customers` (
-  `id` int(5) NOT NULL,
-  `name` varchar(60) NOT NULL,
-  `email` varchar(60) NOT NULL,
-  `address` varchar(100) NOT NULL,
-  `mobile` bigint(20) NOT NULL,
-  `updated_by` int(5) DEFAULT NULL,
-  `updated_on` date NOT NULL,
-  `created_by` int(5) NOT NULL,
-  `created_on` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL,
+  `User_id` int(11) NOT NULL,
+  `name` varchar(60) COLLATE utf8_turkish_ci NOT NULL,
+  `aciklama` text CHARACTER SET utf8 NOT NULL,
+  `address` varchar(50) COLLATE utf8_turkish_ci NOT NULL,
+  `updated_on` datetime DEFAULT NULL,
+  `created_on` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Déchargement des données de la table `customers`
+--
+
+
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
   `id` int(5) NOT NULL,
-  `name` varchar(60) NOT NULL,
+  `name` varchar(60) CHARACTER SET utf8 COLLATE utf8_turkish_ci NOT NULL,
   `email` varchar(60) NOT NULL,
   `password` varchar(60) NOT NULL,
   `active` tinyint(4) NOT NULL,
@@ -54,37 +60,56 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Déchargement des données de la table `users`
+--
+
+
+--
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `customers`
+-- Index pour la table `customers`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD KEY `uye` (`User_id`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `name` (`name`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT pour la table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=378;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `customers`
+--
+ALTER TABLE `customers`
+  ADD CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`User_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
