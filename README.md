@@ -12,7 +12,7 @@ Android app in Google Play: https://play.google.com/store/apps/details?id=com.in
 
 ## REFERENCE INFO 
 REFERENCE FOR BACK-END PHP API (JWT & Request Payload)
-<p>Github: https://github.com/durgesh-sahani/restapi-jwt-php-mysql<br>
+<p>Github: https://github.com/durgesh-sahani/restapi-jwt-php-mysql
 Youtube: https://www.youtube.com/watch?v=l2xghbSlBQg&list=PLCakfctNSHkGQ6S557u-6sLEYsfWje47P<br></p>
 <hr>
  REFERENCE FOR FRONT-END ANDROID RESTFUL API CONSUMER (JWT, refresh token & retrofit)
