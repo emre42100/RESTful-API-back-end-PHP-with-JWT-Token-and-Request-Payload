@@ -5,7 +5,6 @@ Hello! this project "İnal Sözlük" is for those who are interested in restful 
 Language: TR(TURKISH)<br>
 Android app in Google Play: https://play.google.com/store/apps/details?id=com.inalsozluk.app
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <img align="left" src="https://play-lh.googleusercontent.com/DxQclXu14GExc92FIHtAxeL8Z1RaU21bKu6jJRKzC6AYY5I-TgLKhN1nbqtOI41KwA=w1920-h969-rw" width="250" />
 <img align="left" src="https://play-lh.googleusercontent.com/qyhDNLuqq8P4z1cNFVVamdck3tQAI3px1sDCTooSDDUTEJi62mGGBX5exdJhBXXlARg=w1920-h969-rw" width="250" />
 <img  src="https://play-lh.googleusercontent.com/gzCGE5VOyW7jmLDpf8MGSHTs3UBnsKVeOuYE61HX1K0crMZIViiJ6KURv_IYW3VDUA=w1920-h969-rw" width="230" />
